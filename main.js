@@ -18,12 +18,14 @@ function onSubmit(e)
     }
     else
     {
-        const name = e.target.nameInput.value;
-        const email = e.target.emailInput.value;
+        const name = nameInput.value;
+        const email =emailInput.value;
         const obj = {
             name : name,
             email : email
-        }
+        };
+        const serialized = JSON.stringify(obj);
+        localStorage.setItem(email,serialized);
     }
 
 }
